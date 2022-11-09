@@ -4,9 +4,9 @@ module.exports = {
 
     // https://webpack.js.org/concepts/entry-points/#multi-page-application
     entry: {
-        first: './src/first.js',
-        second: './src/second.js',
-        third: './src/third.js'
+        first: './src/first.ts',
+        second: './src/second.ts',
+        third: './src/third.ts'
     },
 
     // https://webpack.js.org/configuration/dev-server/
@@ -17,6 +17,12 @@ module.exports = {
     // https://webpack.docschina.org/configuration/module/
     module: {
         rules: [
+            {
+                // https://webpack.docschina.org/guides/typescript/
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: [
