@@ -14,6 +14,20 @@ module.exports = {
         port: 8081
     },
 
+    // https://webpack.docschina.org/configuration/module/
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    // https://webpack.docschina.org/loaders/
+                    "style-loader",
+                    "css-loader"
+                ]
+            }
+        ]
+    },
+
     // https://webpack.js.org/concepts/plugins/
     plugins: [
         new HtmlWebpackPlugin({
