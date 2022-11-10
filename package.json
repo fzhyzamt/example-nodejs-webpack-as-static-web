@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src --ext .ts",
     "start": "webpack-dev-server --config webpack.config.js --mode development",
     "build": "webpack --mode production"
   },
@@ -13,7 +14,10 @@
   "devDependencies": {
     "@types/lodash": "^4.14.188",
     "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "css-loader": "^6.7.1",
+    "eslint": "^8.27.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.1",
